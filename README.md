@@ -21,3 +21,4 @@ Plan<br>
   Review Socket.io<br>
   Look into bootstrap<br>
   Make the divs<br>
+  Plan out the comment system<br>
