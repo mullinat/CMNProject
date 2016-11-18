@@ -22,3 +22,4 @@ Plan<br>
   Look into bootstrap<br>
   Make the divs<br>
   Plan out the comment system<br>
+  Get the two example chat apps up and running, the problem is that submit actiavetes both at the same time.<br>

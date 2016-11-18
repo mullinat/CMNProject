@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<style>
+
+
+    div.ChatOne {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 400px;
+        background: white;
+        height: 100%;
+        border-style: solid;
+    }
+
+    div.ChatTwo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 100%;
+        background: white;
+        border-style: solid;
+    }
+
+    form {
+        background: #000;
+        padding: 3px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    form input {
+        border: 0;
+        padding: 10px;
+        width: 20%;
+        margin-right: .5%;
+    }
+
+    form button {
+        width: 9%;
+        background: rgb(130, 224, 255);
+        border: none;
+        padding: 10px;
+    }
+
+    nav ul {
+        height: 480px;
+        width: 20%;
+    }
+
+    nav ul {
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}
+</style>
+
+<body>
+    <div class="ChatOne">
+        <nav>
+            <ul id="messages"></ul>
+        </nav>
+        <form action="" accept-charset="">
+            <input id="One" autocomplete="off" /><button>Send</button>
+        </form>
+    </div>
+    <div class="ChatTwo">
+        <nav>
+            <ul id="comments"></ul>
+        </nav>
+        <form action="" accept-charset="">
+            <input id="Two" autocomplete="off" /><button>Send</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        var socket = io();
+        $('form').submit(function() {
+            socket.emit('chat message', $('#One').val());
+            $('#One').val('');
+            return false;
+        });
+        $('form').submit(function() {
+            socket.emit('chat message', $('#Two').val());
+            $('#Two').val('');
+            return false;
+        });
+        socket.on('chat message', function(msg) {
+            $('#messages').append($('<li>').text(msg));
+            $('#comments').append($('<li>').text(msg));
+        });
+    </script>
+</body>
+
+</html>
