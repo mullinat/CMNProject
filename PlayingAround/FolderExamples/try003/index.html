@@ -1,0 +1,26 @@
+<html>
+<style>
+#postComment {
+    display:none;
+}
+</style>
+<div id="container">
+    <div id="mainContent">
+        <div id="addcomment"> <a href='#'>add comment</a>
+
+        </div>
+        <div id='postComment'>
+            <textarea name='comment' id='comment'></textarea>
+            <input type='submit' value='Post Comment' />
+        </div>
+    </div>
+</div>
+
+<script>
+$(function () {
+    $("#addcomment").click(function () {
+        $("#postComment").show("slow");
+    });
+});
+</script> 
+</html>
