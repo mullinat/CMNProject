@@ -6,7 +6,7 @@ div.youtubeVideo {
         top: 0;
         left: 0;
         width: 60%;
-        height: 500px:
+        height: 400px:
     }
 
     div.LiveChat {
@@ -21,7 +21,7 @@ div.youtubeVideo {
 
     div.Comments {
         position: fixed;
-        top: 500px;
+        top: 400px;
         left: 0;
         width: 60%;
         height: 100%;
@@ -65,9 +65,10 @@ div.youtubeVideo {
 
 <body>
     <div class="youtubeVideo">
-        <iframe width="854" height="480" align="center" src="https://www.youtube.com/embed/AU9_0pxiDjY?list=PLaV6UJeBAG04OMUBttT2XS16p6s5HkwDH" frameborder="0" allowfullscreen></iframe>
+        <iframe width="480" height="270" src="https://www.youtube.com/embed/hJHHFE4fgks" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="Comments">
+      <h3>Q and A reddit Style Comments</h3>
         <nav>
             <ul id="messages"></ul>
         </nav>
@@ -76,6 +77,7 @@ div.youtubeVideo {
         </form>
     </div>
     <div class="LiveChat">
+      <h3>Live Chat</h3>
         <nav>
             <ul id="comments"></ul>
         </nav>
@@ -89,17 +91,19 @@ div.youtubeVideo {
     <script>
         var socket = io();
         $('form').submit(function() {
-            socket.emit('chat message', $('#m').val());
+            socket.emit('chat message1', $('#m').val());
             $('#m').val('');
             return false;
         });
         $('form').submit(function() {
-            socket.emit('chat message', $('#c').val());
+            socket.emit('chat message2', $('#c').val());
             $('#c').val('');
             return false;
         });
-        socket.on('chat message', function(msg) {
+        socket.on('chat message2', function(msg) {
             $('#messages').append($('<li>').text(msg));
+        });
+        socket.on('chat message1', function(msg) {
             $('#comments').append($('<li>').text(msg));
         });
     </script>
