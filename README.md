@@ -1,5 +1,6 @@
 What is the plan?<br>
 <br>
+FIGURE OUT HOW TO MAKE THE DIVS SCROLLABLE<br>
 Requirements:<br>
   We need a live chat<br>
   We need a live area to talk with channels<br>
