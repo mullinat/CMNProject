@@ -38,19 +38,21 @@
 <script>
     var socket = io();
     $('form').submit(function() {
-        socket.emit('chat message2', $('#m').val());
-        $('#m').val(''); //emptys form after messaage is sent
-        return false;
-    });
-    socket.on('chat message1', function(msg) {
-        $('#messages').prepend($('<li>').text(msg)); //This actually adds stuff to the form
-    });
-    $('form').submit(function() {
         socket.emit('chat message1', $('#c').val()); //Send message to server
         $('#c').val(''); //Repost message on itself
         return false;
     });
+    socket.on('chat message1', function(msg) {
+        console.log('chat message 1');
+        $('#messages').prepend($('<li>').text(msg)); //This actually adds stuff to the form
+    });
+    $('form').submit(function() {
+        socket.emit('chat message2', $('#m').val());
+        $('#m').val(''); //emptys form after messaage is sent
+        return false;
+    });
     socket.on('chat message2', function(msg) {
+        console.log('chat message 2');
         $('#comments').prepend($('<li>').text(msg)); //This actually adds stuff to the form
     });
 </script>
