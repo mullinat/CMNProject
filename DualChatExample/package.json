@@ -1,9 +1,0 @@
-{
-  "name": "NEW-socet.io-Example",
-  "version": "0.0.1",
-  "description": "Host a directory for the code and files plus have a div chat",
-  "dependencies": {
-    "express": "4.10.2",
-    "socket.io": "1.2.0"
-  }
-}
