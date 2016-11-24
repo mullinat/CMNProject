@@ -15,7 +15,7 @@
 </head>
 <iframe style="width: 60%; height: 400px;" src="https://www.youtube.com/embed/hJHHFE4fgks" frameborder="0" allowfullscreen></iframe>
 <!-- This is the live chat -->
-<div style="width: 40%; position: absolute; right:0px; top:0px; height:200px; overflow:hidden; overflow-y:scroll;">
+<div style="width: 40%; position: absolute; right:0px; top:0px; height:600px; overflow:hidden; overflow-y:scroll;">
     <h3>Live Chat</h3>
     <form action="" accept-charset="">
         <input id="LiveChatInput" autocomplete="off" /><button onclick="LiveChat();">Send</button>
@@ -40,6 +40,9 @@
 
     function LiveChat() {
         var message = document.getElementById("LiveChatInput").value;
+        if (message == "") {
+            return false;
+        }
         console.log(message);
         socket.emit('chat message1', message);
         $('#LiveChatInput').val('');
@@ -55,7 +58,9 @@
 
     function QandAChat() {
         var message = document.getElementById("QandAChatInput").value;
-        console.log(message);
+        if (message == "") {
+            return false;
+        }
         socket.emit('chat message2', message);
         $('#QandAChatInput').val('');
         return false;
