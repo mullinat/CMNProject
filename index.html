@@ -15,10 +15,10 @@
 </head>
 <iframe style="width: 60%; height: 400px;" src="https://www.youtube.com/embed/hJHHFE4fgks" frameborder="0" allowfullscreen></iframe>
 <!-- This is the live chat -->
-<div style="width: 40%; position: absolute; right:0px; top:0px; height:100%; overflow:hidden; overflow-y:scroll;">
+<div style="width: 40%; position: absolute; right:0px; top:0px; height:200px; overflow:hidden; overflow-y:scroll;">
     <h3>Live Chat</h3>
     <form action="" accept-charset="">
-        <input id="c" autocomplete="off" /><button>Send</button>
+        <input id="LiveChatInput" autocomplete="off" /><button onclick="LiveChat();">Send</button>
     </form>
     <nav>
         <ul id="messages"></ul>
@@ -28,7 +28,7 @@
 <div style="width: 60; top:400px; height:200px; width:60%; overflow:hidden; overflow-y:scroll;">
     <h3>Q and A reddit Style Comments</h3>
     <form action="" accept-charset="">
-        <input id="m" autocomplete="off" /><button>Send</button>
+        <input id="QandAChatInput" autocomplete="off" /><button onclick="QandAChat();">Send</button>
     </form>
     <nav>
         <ul id="comments"></ul>
@@ -37,20 +37,32 @@
 
 <script>
     var socket = io();
-    $('form').submit(function() {
-        socket.emit('chat message1', $('#c').val()); //Send message to server
-        $('#c').val(''); //Repost message on itself
+
+    function LiveChat() {
+        var message = document.getElementById("LiveChatInput").value;
+        console.log(message);
+        socket.emit('chat message1', message);
+        $('#LiveChatInput').val('');
         return false;
-    });
+    }
     socket.on('chat message1', function(msg) {
         console.log('chat message 1');
         $('#messages').prepend($('<li>').text(msg)); //This actually adds stuff to the form
     });
+
     $('form').submit(function() {
-        socket.emit('chat message2', $('#m').val());
-        $('#m').val(''); //emptys form after messaage is sent
+        socket.emit('chat message2', $('#QandAChatInput').val());
+        $('#QandAChatInput').val(''); //emptys form after messaage is sent
         return false;
     });
+    /*
+    function QandAChat() {
+        var message = document.getElementById("QandAChatInput").value;
+        console.log(message);
+        socket.emit('chat message1', message);
+        $('#QandAChatInput').val('');
+        return false;
+    }*/
     socket.on('chat message2', function(msg) {
         console.log('chat message 2');
         $('#comments').prepend($('<li>').text(msg)); //This actually adds stuff to the form
