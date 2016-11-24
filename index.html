@@ -49,20 +49,17 @@
         console.log('chat message 1');
         $('#messages').prepend($('<li>').text(msg)); //This actually adds stuff to the form
     });
-
     $('form').submit(function() {
-        socket.emit('chat message2', $('#QandAChatInput').val());
-        $('#QandAChatInput').val(''); //emptys form after messaage is sent
         return false;
     });
-    /*
+
     function QandAChat() {
         var message = document.getElementById("QandAChatInput").value;
         console.log(message);
-        socket.emit('chat message1', message);
+        socket.emit('chat message2', message);
         $('#QandAChatInput').val('');
         return false;
-    }*/
+    }
     socket.on('chat message2', function(msg) {
         console.log('chat message 2');
         $('#comments').prepend($('<li>').text(msg)); //This actually adds stuff to the form
