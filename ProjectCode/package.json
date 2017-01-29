@@ -1,9 +1,10 @@
 {
-  "name": "NEW-socet.io-Example",
-  "version": "0.0.1",
-  "description": "Host a directory for the code and files plus have a div chat",
+  "name": "CMNProject",
+  "version": "0.0.2",
+  "description": "Let's do some SQL",
   "dependencies": {
     "express": "4.10.2",
-    "socket.io": "1.2.0"
+    "socket.io": "1.2.0",
+    "mysql": "^2.5.4"
   }
 }

@@ -1,6 +1,14 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var mysql = require('mysql');
+
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'cmn',
+    password: '3.141IdoNotLikePie',
+    database: 'CMNProject'
+});
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
@@ -15,15 +23,35 @@ app.get('/RandomNames.json', function(req, res) {
     res.sendFile(__dirname + '/RandomNames.json');
 });
 
+
+
+
 io.on('connection', function(socket) {
     socket.on('LiveChat', function(msg) {
         io.emit('LiveChat', msg);
+        connection.query('insert into LiveChat (person, comment) values ("Unknown", "' + msg + '");', function(err, rows, fields) {
+            if (!err)
+                console.log('The solution is: ', rows);
+            else
+                console.log('Error while performing Query.');
+        });
     });
 
     socket.on('QandAChat', function(msg) {
         io.emit('QandAChat', msg);
+        connection.query('insert into LiveChat (person, comment) values ("Unknown", "' + msg + '");', function(err, rows, fields) {
+            if (!err)
+                console.log('The solution is: ', rows);
+            else
+                console.log('Error while performing Query.');
+        });
     });
 });
+
+
+
+
+
 
 http.listen(3000, function() {
     console.log('listening on *:3000');
