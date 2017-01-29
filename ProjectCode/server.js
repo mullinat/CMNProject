@@ -13,12 +13,12 @@ app.get('/Style.css', function(req, res) {
 });
 
 io.on('connection', function(socket) {
-    socket.on('chat message1', function(msg) {
-        io.emit('chat message1', msg);
+    socket.on('LiveChat', function(msg) {
+        io.emit('LiveChat', msg);
     });
 
-    socket.on('chat message2', function(msg) {
-        io.emit('chat message2', msg);
+    socket.on('QandAChat', function(msg) {
+        io.emit('QandAChat', msg);
     });
 });
 

@@ -1,3 +1,4 @@
+var person = prompt("Please enter your name", "Harry Potter");
 var socket = io();
 
 function LiveChat() {
@@ -5,13 +6,11 @@ function LiveChat() {
     if (message == "") {
         return false;
     }
-    console.log(message);
-    socket.emit('chat message1', message);
+    socket.emit('LiveChat', person + " : " + message);
     $('#LiveChatInput').val('');
     return false;
 }
-socket.on('chat message1', function(msg) {
-    console.log('chat message 1');
+socket.on('LiveChat', function(msg) {
     $('#messages').prepend($('<li>').text(msg)); //This actually adds stuff to the form
 });
 $('form').submit(function() {
@@ -23,11 +22,11 @@ function QandAChat() {
     if (message == "") {
         return false;
     }
-    socket.emit('chat message2', message);
+    socket.emit('QandAChat', person + " : " + message);
     $('#QandAChatInput').val('');
     return false;
 }
-socket.on('chat message2', function(msg) {
+socket.on('QandAChat', function(msg) {
     console.log('chat message 2');
     $('#comments').prepend($('<li>').text(msg)); //This actually adds stuff to the form
 });
