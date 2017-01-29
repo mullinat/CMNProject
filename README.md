@@ -1,7 +1,8 @@
 What is the plan?<br>
 <br>
-FIGURE OUT HOW TO MAKE THE DIVS SCROLLABLE<br>
 Requirements:<br>
+  Refer to Design folder to understand what is being done<br>
+  The project code is in the Project Code folder<br>
   We need a live area to talk with channels<br>
 Problems:<br>
   I think I should just make my own comment system with socket.io and store it with JSON or SQL<br>
