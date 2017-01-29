@@ -11,6 +11,9 @@ app.get('/Script.js', function(req, res) {
 app.get('/Style.css', function(req, res) {
     res.sendFile(__dirname + '/Style.css');
 });
+app.get('/RandomNames.json', function(req, res) {
+    res.sendFile(__dirname + '/RandomNames.json');
+});
 
 io.on('connection', function(socket) {
     socket.on('LiveChat', function(msg) {

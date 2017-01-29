@@ -1,4 +1,14 @@
 var person = prompt("Please enter your name", "Harry Potter");
+
+if (person == "Harry Potter") {
+    $.getJSON("./RandomNames.json", function(data) {
+        person = data[parseInt(Math.random() * 100)]["first_name"]
+        alert("You don't want to put in a name I see. Fine then your name is " + person);
+        alert("Deal with it .... refresh the page to change your name " + person);
+    })
+}
+
+
 var socket = io();
 
 function LiveChat() {
