@@ -1,20 +1,18 @@
 <!doctype html>
 <html>
-<style>
-
-</style>
 
 <head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="/Script.js" type="text/javascript"></script>
 </head>
-<iframe style="width: 60%; height: 400px;" src="https://www.youtube.com/embed/hJHHFE4fgks" frameborder="0" allowfullscreen></iframe>
-<!-- This is the live chat -->
+
+<!-- Imbed the youtube video -->
+<iframe style="width: 60%; height: 600px;" src="https://www.youtube.com/embed/hJHHFE4fgks" frameborder="0" allowfullscreen></iframe>
+
+<!-- This is the live chat On the left-->
 <div style="width: 40%; position: absolute; right:0px; top:0px; height:600px; overflow:hidden; overflow-y:scroll;">
     <h3>Live Chat</h3>
     <form action="" accept-charset="">
@@ -24,53 +22,17 @@
         <ul id="messages"></ul>
     </nav>
 </div>
-<!-- This is the one on the bottom -->
+
+<!-- Q and A seciton below video -->
 <div style="width: 60; top:400px; height:200px; width:60%; overflow:hidden; overflow-y:scroll;">
     <h3>Q and A reddit Style Comments</h3>
     <form action="" accept-charset="">
         <input id="QandAChatInput" autocomplete="off" /><button onclick="QandAChat();">Send</button>
     </form>
     <nav>
-        <ul id="comments"></ul>
+      <ul id="comments"></ul>
     </nav>
 </div>
 
-<script>
-    var socket = io();
-
-    function LiveChat() {
-        var message = document.getElementById("LiveChatInput").value;
-        if (message == "") {
-            return false;
-        }
-        console.log(message);
-        socket.emit('chat message1', message);
-        $('#LiveChatInput').val('');
-        return false;
-    }
-    socket.on('chat message1', function(msg) {
-        console.log('chat message 1');
-        $('#messages').prepend($('<li>').text(msg)); //This actually adds stuff to the form
-    });
-    $('form').submit(function() {
-        return false;
-    });
-
-    function QandAChat() {
-        var message = document.getElementById("QandAChatInput").value;
-        if (message == "") {
-            return false;
-        }
-        socket.emit('chat message2', message);
-        $('#QandAChatInput').val('');
-        return false;
-    }
-    socket.on('chat message2', function(msg) {
-        console.log('chat message 2');
-        $('#comments').prepend($('<li>').text(msg)); //This actually adds stuff to the form
-    });
-</script>
-</div>
-</body>
 
 </html>

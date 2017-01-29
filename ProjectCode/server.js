@@ -5,6 +5,9 @@ var io = require('socket.io')(http);
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
+app.get('/Script.js', function(req, res) {
+    res.sendFile(__dirname + '/Script.js');
+});
 
 io.on('connection', function(socket) {
     socket.on('chat message1', function(msg) {
