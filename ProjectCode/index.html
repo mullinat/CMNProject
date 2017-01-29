@@ -16,20 +16,28 @@
 <!-- This is the live chat On the left-->
 <div id="LiveChat">
     <h3>Live Chat</h3>
-    <form action="" accept-charset="">
-        <input id="LiveChatInput" autocomplete="off" /><button onclick="LiveChat();">Send</button>
-    </form>
+    <!-- /input-group -->
+    <div class="input-group">
+        <input id="LiveChatInput"  type="text" class="form-control" placeholder="Feel free to chat">
+        <span class="input-group-btn">
+        <button onclick="LiveChat();" class="btn btn-default" type="button">SEND</button>
+      </span>
+    </div>
     <nav>
         <ul id="messages"></ul>
     </nav>
 </div>
 
 <!-- Q and A seciton below video -->
-<div id="QandA">
+<div id="QandA" style="">
     <h3>Q and A reddit Style Comments</h3>
-    <form action="" accept-charset="">
-        <input id="QandAChatInput" autocomplete="off" /><button onclick="QandAChat();">Send</button>
-    </form>
+    <!-- /input-group -->
+    <div class="input-group">
+        <input id="QandAChatInput" type="text" class="form-control" placeholder="Post a question">
+        <span class="input-group-btn">
+        <button onclick="QandAChat();" class="btn btn-default" type="button">SEND</button>
+      </span>
+    </div>
     <nav>
         <ul id="comments"></ul>
     </nav>

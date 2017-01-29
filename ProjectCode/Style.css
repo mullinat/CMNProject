@@ -24,3 +24,8 @@
     overflow: hidden;
     overflow-y: scroll;
 }
+
+#QandAChatInput {
+  type="text";
+  autocomplete="off";
+}
