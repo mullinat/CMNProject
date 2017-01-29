@@ -1,0 +1,9 @@
+Read old code and simplify / make comments on it
+  Remove any dependencies
+Create users
+  Have popup saying they need a name
+  If blank choose a name for them
+Create the JSON object for all comments
+  One reddit
+  One general live comment
+Update comment threads inside their individual divs

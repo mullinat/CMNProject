@@ -2,15 +2,21 @@ Everything should pull from a SQL Database
   All comments are directly put in a SQL Database
   When a comment is put in the database they are emitted using sockets
   Socket actually passes JSON back and forth between the client and server
-Reddit comments
 I need objects and I need to send them back and forth
-  Missing Time Stamp
+  Reddit comments (reference design)
+  Missing Time Stamp (time since post or time of post)
   Colors for people
   Images for people
   Karma
   Privileges to post comments
   Comments inside comments
   Comment ID
+  Comments can have comments
+User accounts
+  This needs to be a university social network
+  Message other students
+  Have conversations
+  Have voice and video chat built in, Ryerson supports google hangouts
 Thinking
   Need to be able to look at past comments
   Need to be able to search comments

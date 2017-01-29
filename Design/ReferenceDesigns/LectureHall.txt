@@ -1,0 +1,25 @@
+The reference design is the university lecture hall and the university lecture of today
+Let's do a usage scenario
+  Get to university
+  Go to class
+  Sit down in class
+  Lecture starts
+  Class announcements and reminders
+  Take notes
+    on laptop or notebook
+  Ask / Listen to questions
+  Possibly talk to prof
+  Go home
+Problems with reference Design
+  Can not pause, rewind, or control speed
+  Essentially zero feedback for both prof and student
+    iClickers, TopHat
+  Students can only ask so many questions
+  It never goes at students pace always too slow or too fast
+  Does not engage the student they just sit there and listen / fall asleep
+  Bias as fuck because it is a single persons opinion
+    Presentation yesterday they just skipped over education because they do not want to focus on it this year I disagree
+  Discussions are too big and only the smart / extrovert students participate
+  Human attention span is not two hours, 90 min max
+  Does not encourage critical thinking because it is mostly one persons opinion
+  
