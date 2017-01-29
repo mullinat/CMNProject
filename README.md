@@ -1,15 +1,19 @@
-What is the plan?<br>
-<br>
-Requirements:<br>
-  Refer to Design folder to understand what is being done<br>
-  The project code is in the Project Code folder<br>
-  We need a live area to talk with channels<br>
-Problems:<br>
-  I think I should just make my own comment system with socket.io and store it with JSON or SQL<br>
-  How are the comments actaully being stored<br>
-  I need to figure out how to give users UNIQUE usernames<br>
-  How can past comments be stored and rebroadcast<br>
-Plan<br>
-  Figure out the username thing<br>
-  Start storing all the comments on the server in an organized way<br>
-  Get the two example chat apps up and running, the problem is that submit actiavetes both at the same time.<br>
+<pre>
+What is the plan?
+
+Requirements:
+  Refer to Design folder to understand what is being done
+  The project code is in the Project Code folder
+  We need a live area to talk with channels
+Plan
+  Start storing all the comments on the server in an SQL database
+  Query past 5 comments when user first visits sight
+  Query database instead of having socket.io rebroadcast messages
+  Create JSON object for complex comments
+    Color for peoples comments
+    Karma
+    Privileges to post comments
+    Comments inside comments
+    Comment ID, in database
+
+</pre>
