@@ -1,0 +1,26 @@
+#YoutubeVideo {
+    position: absolute;
+    width: 60%;
+    height: 70%;
+    frameborder="0";
+    allowfullscreen;
+}
+
+#LiveChat {
+    width: 40%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#QandA {
+    position: absolute;
+    top:70%;
+    height: 40%;
+    width: 60%;
+    overflow: hidden;
+    overflow-y: scroll;
+}

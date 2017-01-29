@@ -8,6 +8,9 @@ app.get('/', function(req, res) {
 app.get('/Script.js', function(req, res) {
     res.sendFile(__dirname + '/Script.js');
 });
+app.get('/Style.css', function(req, res) {
+    res.sendFile(__dirname + '/Style.css');
+});
 
 io.on('connection', function(socket) {
     socket.on('chat message1', function(msg) {

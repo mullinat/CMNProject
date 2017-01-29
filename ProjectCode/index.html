@@ -2,18 +2,19 @@
 <html>
 
 <head>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-  <script src="/Script.js" type="text/javascript"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/Script.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 
 <!-- Imbed the youtube video -->
-<iframe style="width: 60%; height: 600px;" src="https://www.youtube.com/embed/hJHHFE4fgks" frameborder="0" allowfullscreen></iframe>
+<iframe id="YoutubeVideo" src="https://www.youtube.com/embed/hJHHFE4fgks"></iframe>
 
 <!-- This is the live chat On the left-->
-<div style="width: 40%; position: absolute; right:0px; top:0px; height:600px; overflow:hidden; overflow-y:scroll;">
+<div id="LiveChat">
     <h3>Live Chat</h3>
     <form action="" accept-charset="">
         <input id="LiveChatInput" autocomplete="off" /><button onclick="LiveChat();">Send</button>
@@ -24,13 +25,13 @@
 </div>
 
 <!-- Q and A seciton below video -->
-<div style="width: 60; top:400px; height:200px; width:60%; overflow:hidden; overflow-y:scroll;">
+<div id="QandA">
     <h3>Q and A reddit Style Comments</h3>
     <form action="" accept-charset="">
         <input id="QandAChatInput" autocomplete="off" /><button onclick="QandAChat();">Send</button>
     </form>
     <nav>
-      <ul id="comments"></ul>
+        <ul id="comments"></ul>
     </nav>
 </div>
 
