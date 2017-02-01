@@ -19,7 +19,9 @@
     <h3>Live Chat</h3>
     <!-- LiveChat chat box -->
     <div class="input-group">
-        <input id="LiveChatInput" type="text" class="form-control" placeholder="Feel free to chat">
+        <form onsubmit="LiveChat();">
+            <input id="LiveChatInput" type="text" class="form-control" placeholder="Feel free to chat">
+        </form>
         <span class="input-group-btn">
         <button onclick="LiveChat();" class="btn btn-default" type="button">SEND</button>
       </span>
@@ -35,7 +37,9 @@
     <h3>Q and A reddit Style Comments</h3>
     <!-- QandA chat box -->
     <div class="input-group">
-        <input id="QandAChatInput" type="text" class="form-control" placeholder="Post a question">
+        <form onsubmit="QandAChat();">
+            <input id="QandAChatInput" type="text" class="form-control" placeholder="Post a question">
+        </form>
         <span class="input-group-btn">
         <button onclick="QandAChat();" class="btn btn-default" type="button">SEND</button>
       </span>
