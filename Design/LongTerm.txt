@@ -1,0 +1,25 @@
+Welcome page with links to all types of content
+  Categories
+  Classes
+  Textbooks
+  Specific lectures
+Account
+  Use passport.js for users to make accounts
+  Track what they watch
+  Track what they post
+  See their past comments
+    notifications
+  Have a karma score for past comments
+Quizzes
+  Make a way to Quiz people
+    Be able to make Quizzes
+    Be able to see data from Quizzes
+Reddit Style Comments/Questions
+  Up vote from people logged in
+  Star good questions
+  Post on past questions/comments
+  Moderators
+    Pin posts
+    Remove posts
+Rip off slack
+  Allow people to network as see fits

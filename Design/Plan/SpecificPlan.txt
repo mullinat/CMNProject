@@ -1,5 +1,8 @@
+See past comments and stuff
+  Make API to Be able to make calls to the SQL server
+  Get and Post API
 Create the JSON object for all comments
   I need a class
     One reddit style
     One general live comment
-Update comment threads inside their individual divs
+Research better comment/live chat stuff

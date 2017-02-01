@@ -1,0 +1,23 @@
+I can assign a unique ID to all comments and stuff
+  When I update a live comment from someone else I can have it send out to everyone else
+  This is not scalable
+  I should use REST
+    GET and Post
+    Run in background
+    loop every couple seconds
+Use socket.io for live chat and use REST for Reddit and comment stuff
+  For live question feed I can still use socket.io because it is all in a SQL database
+I should make separate pages for stuff
+  Separate live chat page, for every video
+  Separate comment page for every video
+Customize classroom
+  Make video larger
+  Disable live chat
+  Custom size everything with drag and drop bars
+Crypto
+  HTTPS
+  REST encrypted
+  Encrypt socket.io stuff using the REST stuff
+Passport.js
+  Have people login to this site and track what they do
+Have section of site that a user can use to track where their comments are
