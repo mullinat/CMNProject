@@ -2,10 +2,11 @@
 <html>
 
 <head>
-    <!-- Latest compiled and minified CSS -->
+    <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <!-- Scripts and dependencies stored on server -->
+    <script src="./Requirements/socket.io-1.2.0.js"></script>
+    <script src="./Requirements/jquery-1.11.1.js"></script>
     <script src="/Script.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
@@ -18,7 +19,7 @@
     <h3>Live Chat</h3>
     <!-- LiveChat chat box -->
     <div class="input-group">
-        <input id="LiveChatInput"  type="text" class="form-control" placeholder="Feel free to chat">
+        <input id="LiveChatInput" type="text" class="form-control" placeholder="Feel free to chat">
         <span class="input-group-btn">
         <button onclick="LiveChat();" class="btn btn-default" type="button">SEND</button>
       </span>

@@ -22,6 +22,15 @@ app.get('/Style.css', function(req, res) {
 app.get('/RandomNames.json', function(req, res) {
     res.sendFile(__dirname + '/RandomNames.json');
 });
+app.get('/Requirements/bootstrap.min.css.json', function(req, res) {
+    res.sendFile(__dirname + '/Requirements/bootstrap.min.css.json');
+});
+app.get('/Requirements/jquery-1.11.1.js', function(req, res) {
+    res.sendFile(__dirname + '/Requirements/jquery-1.11.1.js');
+});
+app.get('/Requirements/socket.io-1.2.0.js', function(req, res) {
+    res.sendFile(__dirname + '/Requirements/socket.io-1.2.0.js');
+});
 
 
 
